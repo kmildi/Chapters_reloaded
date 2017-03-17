@@ -1,0 +1,32 @@
+﻿    .navbar_theme {
+      background-color: #FFCFBF;
+      font-weight: 700;
+      font-size: 25px;
+      font-family: Monotype Corsiva;
+    }
+    .navbar__link_theme {
+      color: #A7373D;
+    }
+    .navbar__link_theme:hover {
+      background-color: #555;
+      color: white;
+    }
+    .navbar__link_theme.active, 
+    .navbar__link_theme.active:hover {
+      background-color: #A7373D;
+      color: white;
+    }
+    .chapter_theme {
+      font-size: 25px;
+      font-family: Monotype Corsiva;
+      background-color: #EDFFF2;
+      color: #3E3A51
+     }
+    .chapter_theme p::first-letter {
+    font-size: 35px;
+    color: #EA7C99;
+    }
+    .chapter__title_theme {
+      font-size: 40px;
+      color: #A7373D;
+    }
