@@ -1,11 +1,7 @@
-﻿ 
+﻿	  
    function iconMenu() {
   	var x = document.getElementById("cimsor");
-	if (x.className === "navbar") {
-	   x.className += " responsive";
-	} else {
-	   x.className = "navbar";
-	}
+	x.classList.toggle("open");
    }
 	  
   initSmoothScrolling();
@@ -61,7 +57,6 @@
         opt.callback();
     }
 
-    // Robert Penner's easeInOutQuad - http://robertpenner.com/easing/
     function easeInOutQuad(t, b, c, d) {
         t /= d / 2
       if (t < 1) return c / 2 * t * t + b
@@ -73,20 +68,20 @@
 	  
   (function() {
     'use strict';
-    var section = document.querySelectorAll(".chapter");
-    var sections = {};
-    var i = 0;
-    Array.prototype.forEach.call(section, function(e) {
-      sections[e.id] = e.offsetTop-250;
-    });
-    window.onscroll = function() {
-      var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-      for (i in sections) {
-        if (sections[i] <= scrollPosition) {
-          document.querySelector('.active').setAttribute('class', ' ');
-          document.querySelector('a[href*=' + i + ']').setAttribute('class', 'active');
-        }
-      }
-    };
-  })();  
+   	 var section = document.querySelectorAll(".chapter");
+   	 var sections = {};
+   	 var i = 0;
+   	 Array.prototype.forEach.call(section, function(e) {
+   	   sections[e.id] = e.offsetTop-250;
+   	 });
+  	 window.onscroll = function() {
+   	   var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+     	   for (i in sections) {
+       		if (sections[i] <= scrollPosition) {
+         	  document.querySelector('.active').classList.remove('active');
+         	  document.querySelector('a[href*=' + i + ']').className += ' active';
+	      	}
+    	   }
+   	};
+   })();  
 	  
