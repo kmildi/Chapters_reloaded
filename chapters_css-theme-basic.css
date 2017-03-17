@@ -1,0 +1,26 @@
+﻿    .navbar_theme {
+      background-color: #f1f1f1;
+      font-size: 25px;
+      font-family: calibri;
+    }
+    .navbar__link_theme {
+      color: #000;
+      
+    }
+    .navbar__link_theme:hover {
+      background-color: #555;
+      color: white;
+    }
+    .navbar__link_theme.active, 
+    .navbar__link_theme.active:hover {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .chapter_theme {
+      font-size: 25px;
+      font-family: calibri;
+     }
+    .chapter__title_theme {
+      font-size: 40px;
+      color: green;
+    }
