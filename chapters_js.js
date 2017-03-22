@@ -71,11 +71,16 @@
    	 var section = document.querySelectorAll(".chapter");
    	 var sections = {};
    	 var i = 0;
-   	 window.onscroll = function() {
-   	   Array.prototype.forEach.call(section, function(e) {
+   	 Array.prototype.forEach.call(section, function(e) {
    	     sections[e.id] = e.offsetTop-250;
    	   });
-	   var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+	 window.onresize = function() {
+		Array.prototype.forEach.call(section, function(e) {
+   	  	 sections[e.id] = e.offsetTop-250;
+   	 	});
+         } 
+	 window.onscroll = function() {
+   	   var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
      	   for (i in sections) {
        		if (sections[i] <= scrollPosition) {
          	  document.querySelector('.active').classList.remove('active');
